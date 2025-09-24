@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+}
+.marquee {
+    animation: marquee 60s linear infinite;
+    animation-play-state: paused;
+}
+
+.marquee.scrolling {
+    animation-play-state: running;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.gradient-text {
+    background: linear-gradient(90deg, #3B82F6, #00d9ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.dark .gradient-text {
+    background: linear-gradient(90deg, #60A5FA, #06B6D4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.animated-gradient-background {
+    background-image: linear-gradient(to right, #245FE8, #245FE8);
+    background-size: 200% auto;
+    animation: gradient-animation 10s linear infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.animated-gradient {
+  background-size: 200% 100%;
+  animation: gradientShift 10s linear infinite;
+}
