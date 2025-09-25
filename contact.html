@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Muranja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white dark:bg-gray-800 shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex justify-between h-16 items-center">
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <a href="index.html" class="text-xl font-bold gradient-text">Muranja</a>
+                </div>
+                <div class="hidden md:flex ml-auto items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="about.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="contact.html" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>                    
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="about.html" class="text-gray-500 dark:text-gray-400 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="contact.html" class="text-gray-900 dark:text-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>                
+            </div>
+        </div>
+        <button id="theme-toggle" class="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            <i data-feather="moon"></i>
+        </button>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6" data-aos="fade-up">Get in Touch</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+                I'd love to hear from you. Whether you have a question or just want to say hi, feel free to reach out.
+            </p>
+        </div>
+        <div class="mt-16 max-w-lg mx-auto">
+            <form id="contact-form" class="grid grid-cols-1 gap-y-6" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <label for="name" class="sr-only">Full name</label>
+                    <input type="text" name="name" id="name" autocomplete="name" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800" placeholder="Full name" required>
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800" placeholder="Email" required>
+                </div>
+                <div>
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea id="message" name="message" rows="4" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800" placeholder="Message" required></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full flex items-center justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        <i data-feather="send" class="mr-3 h-5 w-5"></i>
+                        Send Message
+                    </button>
+                </div>
+            </form>
+            <div id="form-feedback" class="mt-6"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">Muranja</h3>
+                    <p class="text-gray-400">Developer crafting meaningful digital experiences.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>                        
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-4">Connect</h4>
+                    <div class="flex space-x-4">                        
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2025 Muranja. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>
